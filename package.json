@@ -1,0 +1,28 @@
+{
+  "name": "profile",
+  "version": "1.0.0",
+  "description": "profile resume",
+  "main": "app.js",
+  "repository": "https://github.com/olatmm/IT-PROFILE.git",
+  "author": "jb",
+  "license": "MIT",
+  "dependencies": {
+    "@types/express": "^4.16.1",
+    "express": "^4.16.4",
+    "express-handlebars": "^3.0.2",
+    "ts-node-dev": "^1.0.0-pre.32",
+    "typescript": "^3.3.3333"
+  },
+  "devDependencies": {
+    "concurrently": "^4.1.0",
+    "nodemon": "^1.18.10"
+  },
+  "scripts": {
+    "tsc": "tsc",
+    "dev": "ts-node-dev --respawn --transpileOnly ./src/server.ts",
+    "prod": "tsc && node ./build/server.js",
+    "watch-ts": "tsc -w",
+    "watch-node": "nodemon build/server.js",
+    "watch": "concurrently -k -p \"[{name}]\" -n \"TypeScript, Node\" -c \"yello.bold, cyan.bold\" \"yarn run watch-ts\" \"yarn run watch-node\""
+  }
+}
