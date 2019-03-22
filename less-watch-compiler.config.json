@@ -1,0 +1,9 @@
+{
+    "allowedExtensions":[".less"],
+    "watchFolder": "less",
+    "outputFolder": "./public/css/",
+    "mainFile": "main.less",
+    "sourceMap": false,
+    "runOnce": false,
+    "enableJs": true
+}

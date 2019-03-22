@@ -10,12 +10,16 @@ app.set("port", process.env.PORT || 3000);
 app.engine('hbs', hbs({
     extname:'hbs',
     defaultLayout:'layout',
-    layoutDir: __dirname + '../build/views/'
+    layoutDir: __dirname + '../build/views/',
+    partialsDir: __dirname + '/views/partials/'
 }));
 
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
-app.use(express.static(path.join(__dirname, 'public')));
+
+app.use(express.static(path.join(__dirname, '../public/')));
 app.use('/', routes);
+
+
 
 export default app;

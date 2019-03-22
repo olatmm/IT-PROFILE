@@ -15,6 +15,7 @@
   },
   "devDependencies": {
     "concurrently": "^4.1.0",
+    "less": "^3.9.0",
     "nodemon": "^1.18.10"
   },
   "scripts": {
@@ -22,7 +23,8 @@
     "dev": "ts-node-dev --respawn --transpileOnly ./src/server.ts",
     "prod": "tsc && node ./build/server.js",
     "watch-ts": "tsc -w",
-    "watch-node": "nodemon build/server.js",
+    "watch-node": "nodemon buillessd/server.js",
+    "less": " less-watch-compiler ",
     "watch": "concurrently -k -p \"[{name}]\" -n \"TypeScript, Node\" -c \"yello.bold, cyan.bold\" \"yarn run watch-ts\" \"yarn run watch-node\""
   }
 }
